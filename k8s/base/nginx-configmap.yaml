@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: nginx-config
-  namespace: digital-step-flow
+  namespace: development
 data:
   nginx.conf: |
     # User is set via securityContext.runAsUser in deployment

@@ -2,7 +2,7 @@ apiVersion: policy/v1
 kind: PodDisruptionBudget
 metadata:
   name: digital-step-flow-frontend-pdb
-  namespace: digital-step-flow
+  namespace: development
 spec:
   minAvailable: 1
   selector:

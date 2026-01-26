@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: digital-step-flow-frontend
+  name: digital-step-flow-frontend-dev
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: default
+  project: workloads
   source:
     repoURL: https://github.com/raphaelmoraes/pucrs-tcc-digital-step-flow-frontend
-    targetRevision: main
+    targetRevision: develop
     path: k8s
   destination:
     server: https://kubernetes.default.svc
-    namespace: digital-step-flow
+    namespace: development
   syncPolicy:
     automated:
       prune: true
