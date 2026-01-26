@@ -2,7 +2,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: digital-step-flow-frontend
-  namespace: digital-step-flow
+  namespace: production
   labels:
     app: digital-step-flow-frontend
     app.kubernetes.io/component: frontend

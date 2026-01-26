@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: digital-step-flow-frontend
-  namespace: digital-step-flow
+  namespace: production
   labels:
     app: digital-step-flow-frontend
     app.kubernetes.io/component: frontend
