@@ -4,22 +4,25 @@ kind: Kustomization
 namespace: development
 
 resources:
-  - ../base
+- ../base
 
 commonLabels:
   app.kubernetes.io/component: frontend
   app.kubernetes.io/environment: dev
 
 images:
-  - name: raphaelmoraes/digital-step-flow-frontend
-    newName: raphaelmoraes/digital-step-flow-frontend
-    newTag: 24.13.0-r1-dev
+- name: frontend
+  newName: raphaelmoraes/digital-step-flow-frontend
+  newTag: 0.0.0
+- name: raphaelmoraes/digital-step-flow-frontend
+  newName: raphaelmoraes/digital-step-flow-frontend
+  newTag: 24.13.0-r1-dev
 
 patches:
-  - target:
-      kind: Deployment
-      name: digital-step-flow-frontend
-    patch: |-
-      - op: replace
-        path: /spec/replicas
-        value: 1
+- patch: |-
+    - op: replace
+      path: /spec/replicas
+      value: 1
+  target:
+    kind: Deployment
+    name: digital-step-flow-frontend
