@@ -13,7 +13,7 @@ commonLabels:
 images:
 - name: frontend
   newName: raphaelmoraes/digital-step-flow-frontend
-  newTag: 0.0.0
+  newTag: 0.0.1
 - name: raphaelmoraes/digital-step-flow-frontend
   newName: raphaelmoraes/digital-step-flow-frontend
   newTag: 24.13.0-r1-dev
